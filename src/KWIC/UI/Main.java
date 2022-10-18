@@ -42,15 +42,17 @@ public class Main {
 		JComponent three = create(TypeEnum.THERE_TYPE.getType());
 		JComponent fourth = create(TypeEnum.FOURTH_TYPE.getType());
 
-		table.add("主程序-子程序",one);
-		table.add("面向对象",two);
-		table.add("事件系统",three);
-		table.add("管道-过滤",fourth);
+		table.add(TypeEnum.ONE_TYPE.getMessage(),one);
+		table.add(TypeEnum.TOW_TYPE.getMessage(), two);
+		table.add(TypeEnum.THERE_TYPE.getMessage(), three);
+		table.add(TypeEnum.FOURTH_TYPE.getMessage(), fourth);
 		table.setSelectedIndex(0);
 		frame.setContentPane(table);
 		frame.setVisible(true);
 	}
 	private static JComponent create(Integer type) {
+
+
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridBagLayout());
 		String desc = "";
